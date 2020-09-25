@@ -1,0 +1,13 @@
+
+public class MathClassApp {
+
+	public static void main(String[] args) {
+	
+		long result1=Math.round(1.667);
+		;
+
+		int result2=Math.round(1.49F);
+		System.out.println(result2);
+	}
+
+}

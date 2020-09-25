@@ -1,0 +1,16 @@
+import java.math.BigDecimal;
+
+public class BigDecimalApp {
+
+	public static void main(String[] args) {
+		// 
+		
+		double pct = .0356789;
+		
+		BigDecimal pctBD = new BigDecimal(pct);
+		System.out.println(pctBD);
+		
+
+	}
+
+}

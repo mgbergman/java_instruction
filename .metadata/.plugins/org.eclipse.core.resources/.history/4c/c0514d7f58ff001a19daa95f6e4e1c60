@@ -1,0 +1,34 @@
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
+public class BigDecimalApp {
+
+	public static void main(String[] args) {
+		// 
+		
+		double pct = .0356789;
+		
+		BigDecimal pctBD = new BigDecimal(pct);
+		System.out.println(pctBD);
+		pctBD=pctBD.setScale(4, RoundingMode.HALF_UP);
+		System.out.println(pctBD);
+		
+		BigDecimal bd1 = new BigDecimal(60);
+		BigDecimal bd2 = new BigDecimal(25.5);
+		BigDecimal bd3 = new BigDecimal("10.75");
+		
+		BigDecimal sum = bd1.add(bd2);
+		System.out.println(sum);
+		
+		BigDecimal diff = bd2.subtract(bd3);
+		System.out.println(diff);
+		
+		BigDecimal product = bd2.multiply(bd3);
+		System.out.println(product);
+		
+		
+		
+
+	}
+
+}
