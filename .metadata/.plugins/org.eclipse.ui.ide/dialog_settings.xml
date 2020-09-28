@@ -50,6 +50,9 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\murach\java\eclipse\ex_solutions\ch03_ex2_TestScore_sol"/>
+			<item value="C:\murach\java\eclipse\ex_starts\ch03_ex2_TestScore"/>
+			<item value="C:\murach\java\eclipse\ex_starts\ch03_ex1_MPG"/>
 			<item value="C:\murach\java\eclipse\ex_starts\ch02_ex3_Invoice"/>
 			<item value="C:\murach\java\eclipse\ex_starts\ch02_ex2_TestScore"/>
 			<item value="C:\murach\java\eclipse\ex_starts\ch02_ex1_Invoice"/>
