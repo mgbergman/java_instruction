@@ -5,14 +5,7 @@ public class InitialMenuAPP {
 	public static void main(String[] args) {
 		System.out.println("Welcome to the Bootcamp Movie App!");
 		Scanner sc = new Scanner (System.in);
-		String firstName;
-		String lastName;
-		String gender;
-		String birthDate;
-		String movieTitle;
-		String movieYear;
-		String movieRating;
-		String movieGenre;
+		
 		String command = "";
 		
 		while (!command.equalsIgnoreCase("3")) {
@@ -26,35 +19,35 @@ public class InitialMenuAPP {
 			switch (command) {
 			case "1":
 				System.out.println("Add an Actor:     ");
-				System.out.print("First Name?                 ");
-				firstName = sc.next();
-				System.out.print("Last Name?                  ");
-				lastName = sc.next();
-				System.out.print("Gender?                     ");
-				gender = sc.next();
-				System.out.print("Birthdate? (YYYY-MM-DD)     ");
-				birthDate = sc.next(); 
+				
+				String firstName = Console.getString("First Name?                 ");
+				String lastName = Console.getString("Last Name?                  ");
+				String gender = Console.getString("Gender?                     ");
+				String birthDate = Console.getString("Birthdate? (YYYY-MM-DD)     ");
+				
+				
+				Actor a = new Actor(firstName, lastName, gender, birthDate);
 				System.out.println();
-				System.out.print("Actor Summary:  ");
-				System.out.print(firstName + " " + lastName + ", " + gender + ", born " + birthDate); 
-				System.out.println(); 
-				System.out.println(); 
+				System.out.println(a.displayContact());
+				
+				
 				break;
 			
 			case "2":
 				
-				System.out.print("Title?              ");
-				movieTitle = sc.next();
-				System.out.print("Year?               ");
-				movieYear = sc.next();
-				System.out.print("Rating?             ");
-				movieRating = sc.next();			
-				System.out.print("Genre?              ");
-				movieGenre = sc.next();
+				
+				System.out.println();
+				String movieTitle = Console.getString("Title?   ");
+				String movieYear = Console.getString("Year?   ");
+				String movieRating = Console.getString("Rating?     ");
+				String movieGenre = Console.getString("Genre?     ");
+				
+				Movie m = new Movie(movieTitle, movieYear, movieRating, movieGenre);
+				System.out.println();
+				System.out.println(m.displayContact());
+				
 				System.out.println(); 
-				System.out.println("Movie Summary:  ");
-				System.out.println(movieTitle + " " + "(" + movieRating + ") " + "was released in " + movieYear + ".");
-				System.out.println("Genre(s): " + movieGenre);
+				
 				System.out.println(); 
 				break;	
 			

@@ -25,13 +25,16 @@ public class greatestCommonDivisor {
 					yNumber = xNumber;
 					xNumber = commonDiv;
 	
-		
+					
 				}
-			
+			System.out.println(yNumber);
+			System.out.println("Continue? (y/n)");
+			choice = sc.next();
+            System.out.println();
 			
 			}	
 		
-		System.out.println(yNumber);
+		
 		}
 }
 		

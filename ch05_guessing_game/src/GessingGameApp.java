@@ -8,7 +8,7 @@ public class GessingGameApp {
 		System.out.println("+++++++++++++++++++++++++++++++");
 		System.out.println();
 		Scanner sc = new Scanner(System.in);
-		String choice = "y";
+		String choice = "y"; 
 		
 		while (choice.equalsIgnoreCase("y")) {
 			//* continue loop starts here
