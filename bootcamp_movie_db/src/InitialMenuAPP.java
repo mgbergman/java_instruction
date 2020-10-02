@@ -4,7 +4,7 @@ public class InitialMenuAPP {
 
 	public static void main(String[] args) {
 		System.out.println("Welcome to the Bootcamp Movie App!");
-		Scanner sc = new Scanner (System.in);
+		///Scanner sc = new Scanner (System.in);
 		
 		String command = "";
 		
@@ -14,8 +14,8 @@ public class InitialMenuAPP {
 			System.out.println("2 - Add Movie     ");
 			System.out.println("3 - Exit     ");
 			System.out.println();	
-			System.out.print("Command:  ");
-			command = sc.next();
+			
+			command = Console.getString("Command?   ");
 			switch (command) {
 			case "1":
 				System.out.println("Add an Actor:     ");
@@ -37,7 +37,7 @@ public class InitialMenuAPP {
 				
 				
 				System.out.println();
-				String movieTitle = Console.getString("Title?   ");
+				String movieTitle = Console.getLine("Title?   ");
 				String movieYear = Console.getString("Year?   ");
 				String movieRating = Console.getString("Rating?     ");
 				String movieGenre = Console.getString("Genre?     ");
