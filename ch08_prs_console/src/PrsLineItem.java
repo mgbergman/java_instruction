@@ -1,6 +1,7 @@
 
 public class PrsLineItem {
 	
+		private int LineItemID;
 		private int RequestID;
 		private int ProductID;
 		private int Quantity;
@@ -8,7 +9,9 @@ public class PrsLineItem {
 		public PrsLineItem() {
 		}
 
-		public PrsLineItem(int requestID, int productID, int quantity) {
+		public PrsLineItem(int LineItemID, int requestID, int productID, int quantity) {
+			int lineItemID = 0;
+			LineItemID = lineItemID;
 			RequestID = requestID;
 			ProductID = productID;
 			Quantity = quantity;
@@ -41,6 +44,14 @@ public class PrsLineItem {
 		@Override
 		public String toString() {
 			return "PrsLineItem [RequestID=" + RequestID + ", ProductID=" + ProductID + ", Quantity=" + Quantity + "]";
+		}
+
+		public int getLineItemID() {
+			return LineItemID;
+		}
+
+		public void setLineItemID(int lineItemID) {
+			LineItemID = lineItemID;
 		}
 		
 		

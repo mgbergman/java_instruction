@@ -101,12 +101,13 @@ public class PrsConsoleApp {
 				
 					case "5":
 						
+						int LineItemID = Console.getInt("ID?                                   ");
 						int RequestID = Console.getInt("Request ID?                            ");
 						int ProductID = Console.getInt("Product ID?                            ");
 						int Quantity = Console.getInt("Quantity?                               ");
 						
 						
-						PrsLineItem l = new PrsLineItem(RequestID, ProductID, Quantity);
+						PrsLineItem l = new PrsLineItem(LineItemID, RequestID, ProductID, Quantity);
 						System.out.println();
 						System.out.println(l.toString());
 				 
