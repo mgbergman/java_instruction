@@ -1,6 +1,7 @@
 
 public class Actor {
 	
+	private static int actorID;
 	private String firstName;
 	private String lastName;
 	private String gender;
@@ -8,12 +9,26 @@ public class Actor {
 	
 	public Actor() {
 	}
-
-	public Actor(String firstName, String lastName, String gender, String birthdate) {
+	
+	public Actor(int actorID, String firstName, String lastName, String gender, String birthdate) {
+		this.actorID = actorID;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.gender = gender;
 		this.birthdate = birthdate;
+	}
+
+
+	public static int getActorID() {
+		return actorID;
+	}
+
+	public void setActorID(int actorID) {
+		this.actorID = actorID;
+	}
+
+	public Actor(int actorID) {
+		this.actorID = actorID;
 	}
 
 	public String getFirstName() {
@@ -50,10 +65,10 @@ public class Actor {
 
 	@Override
 	public String toString() {
-		return "Actor [firstName=" + firstName + ", lastName=" + lastName + ", gender=" + gender + ", birthdate="
-				+ birthdate + "]";
+		return "Actor [actorID=" + actorID + ", firstName=" + firstName + ", lastName=" + lastName + ", gender="
+				+ gender + ", birthdate=" + birthdate + "]";
 	}
-	
+
 	public String displayContact() {
 		String str = "-------------------------------------------------\n";
 		str += "-------------------------------------------------\n";
@@ -62,6 +77,7 @@ public class Actor {
 		str += "-------------------------------------------------\n";
 		
 		return str;
+	}
 	}
 	
 	
@@ -72,4 +88,4 @@ public class Actor {
 	
 	
 
-}
+
