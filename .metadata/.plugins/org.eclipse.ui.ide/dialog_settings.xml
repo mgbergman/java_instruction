@@ -29,6 +29,11 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\murach\java\eclipse\ex_solutions\ch12_ex1_CardDeck_sol"/>
+			<item value="C:\murach\java\eclipse\ex_starts\ch12_ex1_CardDeck"/>
+			<item value="C:\murach\java\eclipse\ex_solutions\ch11_ex2_FutureValue_sol"/>
+			<item value="C:\murach\java\eclipse\ex_starts\ch11_ex2_FutureValue"/>
+			<item value="C:\murach\java\eclipse\ex_starts\ch11_ex1_MonthSales"/>
 			<item value="C:\murach\java\eclipse\ex_starts\ch07_ex3_AreaAndPerimeter"/>
 			<item value="C:\murach\java\eclipse\ex_solutions\ch07_ex2_FutureValue_sol"/>
 			<item value="C:\murach\java\eclipse\ex_starts\ch07_ex2_FutureValue"/>

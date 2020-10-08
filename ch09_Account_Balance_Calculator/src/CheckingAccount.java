@@ -1,14 +1,14 @@
 
 public class CheckingAccount extends Account {
 
-	double monthlyFee;
+	private double monthlyFee;
 	
 	public CheckingAccount(double mF) {
 		monthlyFee = mF;
 	}
 	
 	public void deductFee(double bal) {
-		balance = bal - monthlyFee;	
+		balance = balance - monthlyFee;	
 		
 	}
 	
@@ -16,7 +16,15 @@ public class CheckingAccount extends Account {
 		return monthlyFee;
 		
 	}
+
+	public CheckingAccount(double balance, double monthlyFee) {
+		super(balance);
+		this.monthlyFee = monthlyFee;
+	}
+	
+	
 		
+	
 		
 		
 	}

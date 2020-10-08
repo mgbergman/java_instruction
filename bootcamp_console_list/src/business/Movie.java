@@ -1,20 +1,24 @@
+package business;
 
 public class Movie {
 
+	private static int movieID;
 	private String movieTitle;
 	private String movieYear;
 	private String movieRating;
 	private String movieGenre;
 	
-	public Movie(String movieTitle, String movieYear, String movieRating, String movieGenre) {
+	
+
+	public Movie(int movieID, String movieTitle, String movieYear, String movieRating, String movieGenre) {
+		this.movieID = movieID;
 		this.movieTitle = movieTitle;
 		this.movieYear = movieYear;
 		this.movieRating = movieRating;
 		this.movieGenre = movieGenre;
 	}
 
-	public Movie() {
-	}
+	
 
 	public String getMovieTitle() {
 		return movieTitle;
@@ -64,6 +68,14 @@ public class Movie {
 		str += "-------------------------------------------------\n";
 		
 		return str;
+	}
+
+	public static int getMovieID() {
+		return movieID;
+	}
+
+	public static void setMovieID(int movieID) {
+		Movie.movieID = movieID;
 	}
 	
 	

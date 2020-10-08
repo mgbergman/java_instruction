@@ -1,25 +1,26 @@
+package business;
 
 public class Actor {
 	
-	private static int actorID;
+	private int actorID;
 	private String firstName;
 	private String lastName;
 	private String gender;
-	private String birthdate;
+	private String birthDate;
 	
 	public Actor() {
 	}
 	
-	public Actor(int actorID, String firstName, String lastName, String gender, String birthdate) {
+	public Actor(int actorID, String firstName, String lastName, String gender, String birthDate) {
 		this.actorID = actorID;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.gender = gender;
-		this.birthdate = birthdate;
+		this.birthDate = birthDate;
 	}
 
 
-	public static int getActorID() {
+	public int getActorID() {
 		return actorID;
 	}
 
@@ -55,25 +56,25 @@ public class Actor {
 		this.gender = gender;
 	}
 
-	public String getBirthdate() {
-		return birthdate;
+	public String getbirthDate() {
+		return birthDate;
 	}
 
-	public void setBirthdate(String birthdate) {
-		this.birthdate = birthdate;
+	public void setbirthDate(String birthDate) {
+		this.birthDate = birthDate;
 	}
 
 	@Override
 	public String toString() {
 		return "Actor [actorID=" + actorID + ", firstName=" + firstName + ", lastName=" + lastName + ", gender="
-				+ gender + ", birthdate=" + birthdate + "]";
+				+ gender + ", birthDate=" + birthDate + "]";
 	}
 
 	public String displayContact() {
 		String str = "-------------------------------------------------\n";
 		str += "-------------------------------------------------\n";
-		str +=  firstName + " " + lastName+ "\n" ;
-		str += "is "+ gender + "and was born on " + birthdate + "\n";
+		str +=  actorID + " " + firstName + " " + lastName+ "\n" ;
+		str += "is "+ (gender.equalsIgnoreCase("M")? "Male":"Female") + " and was born on " + birthDate + "\n";
 		str += "-------------------------------------------------\n";
 		
 		return str;

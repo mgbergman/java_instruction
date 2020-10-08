@@ -10,19 +10,24 @@ public class SavingsAccount extends Account {
 		monthlyInterestRate = mIR;
 	}
 	
-	public void calMonthlyPayment(double bal) {
-		monthlyInterestPayment = monthlyInterestRate * bal;
+	public void calMonthlyPayment(double balance) {
+		monthlyInterestPayment = monthlyInterestRate * balance;
 		balance = balance + monthlyInterestPayment;
-		
 	}
 	
-	public double getMonthlyInterestPayment (double bal) {
+	public double getMonthlyInterestPayment (double balance) {
 		
-		monthlyInterestPayment = monthlyInterestPayment * bal;
-		return monthlyInterestPayment;
-		
-		
+		monthlyInterestPayment = monthlyInterestPayment * balance;
+		return monthlyInterestPayment;	
 		
 	}
+
+	public SavingsAccount(double balance, double monthlyInterestRate) {
+		super(balance);
+		this.monthlyInterestRate = monthlyInterestRate;
+		this.monthlyInterestPayment = monthlyInterestPayment;
+	}
+	
+	
 
 }

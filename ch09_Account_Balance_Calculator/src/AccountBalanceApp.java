@@ -1,53 +1,83 @@
 import java.text.NumberFormat;
 
+
 import ui.console.Console;
 
 public class AccountBalanceApp {
+	
+	private static NumberFormat currencyFormat = NumberFormat.getCurrencyInstance();
 
-	public AccountBalanceApp() {
-		// TODO Auto-generated constructor stub
-	}
 
 	public static void main(String[] args) {
 		
 		Account User = new Account();
-		CheckingAccount UserChecking = new CheckingAccount(1);
-		SavingsAccount UserSavings = new SavingsAccount(.01);
+		CheckingAccount UserChecking = new CheckingAccount(1000, 1.0);
+		SavingsAccount UserSavings = new SavingsAccount(1000,.01);
 		
-		NumberFormat currencyFormat = NumberFormat.getCurrencyInstance();
+		
 		
 		System.out.println("Welcome to the Account application");
-		String choice = "y";
+		
 		System.out.println("Starting Balance:     ");
-			System.out.print("Checking:     "  );
-			System.out.println(currencyFormat.format
-					(UserChecking.getBalance()));
-			System.out.print("Savings:      "  );
-			System.out.print(currencyFormat.format
-					(UserSavings.getBalance()));
+			displayBalanceSummary(UserChecking, UserSavings);	
+			
+		String choice = "y";
 		
 		while (choice.equalsIgnoreCase("y")) {
+			String transType = Console.getChoiceString("withdraw/despoit", "w","d");
+			String account = Console.getChoiceString("Checking or savings", "c", "a");
 			
 			
+			double max = 0;
+			Account a = null;
+					if (account.equalsIgnoreCase("c")) {
+						a = UserChecking;
+					}
+					else {
+						a = UserSavings;
+					}
+					
 			
+			if (transType.equalsIgnoreCase("w"))
+				max = a.getBalance();
+				else
+					max = Double.POSITIVE_INFINITY;
 			
+			double amount = Console.getDouble("Amount?", 1, max);
 			
+			if (transType.equalsIgnoreCase("w"))
+				a.withdraw(amount);
 			
+			else
+				a.deposit(amount);
 			
-			
-			
+		
 			
 			
 		}
-		choice=Console.getString("Continue? ");
 		
 		
 		
 		
 		
-		
+		choice=Console.getChoiceString("Continue? ","y","n");
 		System.out.println("Continue (y/n)");
+	
+		UserChecking.getMonthlyFee();
+		UserSavings.getMonthlyInterestPayment(0);
+		
 
+	}
+
+
+	private static void displayBalanceSummary(CheckingAccount UserChecking, SavingsAccount UserSavings) {
+		System.out.print("Checking:     "  );
+		System.out.println(currencyFormat.format
+				(UserChecking.getBalance()));
+		System.out.print("Savings:      "  );
+		System.out.print(currencyFormat.format
+				(UserSavings.getBalance()));
+		System.out.println();
 	}
 
 }

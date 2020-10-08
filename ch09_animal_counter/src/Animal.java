@@ -17,14 +17,14 @@ public abstract class Animal implements Countable {
 
 	@Override
 	public int getCount() {
-		// TODO Auto-generated method stub
+	
 		return animalCount;
 	}
 
 	@Override
 	public String getCountString() {
-		// TODO Auto-generated method stub
-		return animalCount + "animal";
+		
+		return animalCount + "  animal";
 	}
 	
 	

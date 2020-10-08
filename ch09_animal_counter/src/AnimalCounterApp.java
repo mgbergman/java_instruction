@@ -6,12 +6,18 @@ public class AnimalCounterApp {
 	
 	        countAlligators();
 	        countSheep();
+	        countPigs();
 	    }
 
 	    public static void countAlligators() {
 	        System.out.println("Counting alligators...\n");
 	        Alligator gator = new Alligator();
-	        count(gator, 3);
+	        count(gator, 2);
+	    }
+	    public static void countPigs() {
+	        System.out.println("Counting piggys...\n");
+	        Pig piggy = new Pig();
+	        count(piggy, 4);
 	    }
 
 	    public static void countSheep() {
