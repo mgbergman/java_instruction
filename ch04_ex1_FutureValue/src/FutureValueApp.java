@@ -23,15 +23,17 @@ public class FutureValueApp {
             int months = years * 12;
 
             // use a for loop to calculate the future value
+            
+            NumberFormat currency = NumberFormat.getCurrencyInstance();
             double futureValue = 0.0;
             for (int i = 1; i <= months; i++) {
                 futureValue = (futureValue + monthlyInvestment) * 
                               (1 + monthlyInterestRate);
-                System.out.println(i + "  " + futureValue);
+                System.out.println(i + "  " + currency.format(futureValue));
             }
 
             // format the result and display it to the user
-            NumberFormat currency = NumberFormat.getCurrencyInstance();
+            
             System.out.println("Future value:               "
                     + currency.format(futureValue));
             System.out.println();

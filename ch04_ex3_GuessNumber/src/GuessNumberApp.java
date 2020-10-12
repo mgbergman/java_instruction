@@ -31,11 +31,13 @@ public class GuessNumberApp {
             } else if (guess > number) {
                 System.out.println("Too high.");
             }           
-            count++;
-        
+            count++;  
+            
+        }
         System.out.println("You guessed it in " + 
                 count + " tries.\n");
-        System.out.println("Bye!");
+        
+            System.out.println("Bye!");
+      
         }
         }   
-}

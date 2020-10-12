@@ -21,7 +21,7 @@ public class InvoiceApp {
     
              
             if ((!choice.equalsIgnoreCase("r"))) {
-            	  System.out.print("RRRRR ");
+//            	  System.out.print("RRRRR ");
             	  System.out.print(customerType);
                     if (subtotal < 250) {
                         discountPercent = 0.0;

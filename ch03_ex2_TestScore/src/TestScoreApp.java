@@ -43,12 +43,14 @@ public class TestScoreApp {
         // display the score count, score total, and average score
         double averageScore = (double) scoreTotal / scoreCount;
         NumberFormat number = NumberFormat.getNumberInstance();
-        number.setMaximumFractionDigits(1);
-    
-		String message = "\n"
+        number.setMaximumFractionDigits(2);
+        
+        NumberFormat currency =NumberFormat.getCurrencyInstance();
+		
+        String message = "\n"
                 + "Score count:   " + scoreCount + "\n"
-                + "Score total:   " + scoreTotal + "\n"
-                + "Average score: " + averageScore + "\n"
+                + "Score total:   " +currency.format(scoreTotal) + "\n"
+                + "Average score: " + number.format(averageScore) + "\n"
                 + "Highest score: " + maxScore + "\n"
           ;
         System.out.println(message);

@@ -31,27 +31,27 @@ public class GuessNumberApp {
         	
             
         	System.out.print("Your guess: ");
-        	if(sc.hasNextInt()) {
-        		guess = sc.nextInt();
-        		sc.nextLine(); 		
-        	} else { 
-        		System.out.println("err!");
-        		sc.nextLine();
-        		continue;
-        	}
+//        	if(sc.hasNextInt()) {
+//        		guess = sc.nextInt();
+//        		sc.nextLine(); 		
+//        	} else { 
+//        		System.out.println("err!");
+//        		sc.nextLine();
+//        		continue;
+//        	}
            
- //   	try {
-//        	 guess = sc.nextInt();
-//        	
- //           
- //           }
+        	try {
+        	 guess = sc.nextInt();
+      	
             
- //           catch (InputMismatchException e) {
- //           	System.out.println("Error");
- //           	sc.nextLine();
-  //          	continue;
+           }
+            
+           catch (InputMismatchException e) {
+           	System.out.println("Error");
+         	sc.nextLine();
+        	continue;
             	
-  //          }
+         }
             
             
             if (guess < 1 || guess > LIMIT) {
