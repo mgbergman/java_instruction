@@ -1,18 +1,23 @@
 package business;
 
+import java.time.LocalDate;
+
 public class Actor {
 	
-	private int actorID;
+	private int ID;
 	private String firstName;
 	private String lastName;
 	private String gender;
-	private String birthDate;
+	private LocalDate birthDate;
+
 	
 	public Actor() {
 	}
 	
-	public Actor(int actorID, String firstName, String lastName, String gender, String birthDate) {
-		this.actorID = actorID;
+	
+	public Actor(int ID, String firstName, String lastName, String gender, LocalDate birthDate) {
+		super();
+		this.ID = ID;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.gender = gender;
@@ -20,16 +25,18 @@ public class Actor {
 	}
 
 
-	public int getActorID() {
-		return actorID;
+
+
+	public int getID() {
+		return ID;
 	}
 
-	public void setActorID(int actorID) {
-		this.actorID = actorID;
+	public void setID(int actorID) {
+		this.ID = ID;
 	}
 
-	public Actor(int actorID) {
-		this.actorID = actorID;
+	public Actor(int ID) {
+		this.ID = ID;
 	}
 
 	public String getFirstName() {
@@ -56,24 +63,31 @@ public class Actor {
 		this.gender = gender;
 	}
 
-	public String getbirthDate() {
+	
+	public LocalDate getBirthDate() {
+		
+		
 		return birthDate;
 	}
 
-	public void setbirthDate(String birthDate) {
+
+	public void setBirthDate(LocalDate birthDate) {
 		this.birthDate = birthDate;
 	}
 
+
+	
+
 	@Override
 	public String toString() {
-		return "Actor [actorID=" + actorID + ", firstName=" + firstName + ", lastName=" + lastName + ", gender="
-				+ gender + ", birthDate=" + birthDate + "]";
+		return ("actorID=" + ID + ", firstName=" + firstName + ", lastName=" + lastName + ", gender="
+				+ gender + ", birthDate=" + birthDate);
 	}
 
 	public String displayContact() {
 		String str = "-------------------------------------------------\n";
 		str += "-------------------------------------------------\n";
-		str +=  actorID + " " + firstName + " " + lastName+ "\n" ;
+		str +=  ID + " " + firstName + " " + lastName+ "\n" ;
 		str += "is "+ (gender.equalsIgnoreCase("M")? "Male":"Female") + " and was born on " + birthDate + "\n";
 		str += "-------------------------------------------------\n";
 		

@@ -20,19 +20,21 @@ public class reservationCalculatorApp {
 		
 		System.out.println();
 		arrival = Reservation.getArrivalDate(yearStart, monthStart, dayStart);
-		
+		LocalDate arrivalDate = LocalDate.of(yearStart, monthStart, dayStart);
 		
 		int monthEnd = Console.getInt("Enter the departure month (1-12): ");
 		int	dayEnd = Console.getInt("Enter the departure day (1-31): ");
 		int yearEnd = Console.getInt("Enter the departure year: ");
 		
 		departure = Reservation.getDepartureDate(yearEnd, monthEnd, dayEnd);
+		LocalDate departureDate = LocalDate.of(yearEnd, monthEnd, dayEnd);
+		
 		
 		System.out.println();
-		System.out.println("Arrival Date: " + arrival);
-		System.out.println("Departure Date " + departure);
+		System.out.println("Arrival Date: " + Reservation.getArrivalDateFormatted());
+		System.out.println("Departure Date " + Reservation.getDepartureDateFormatted());
 		System.out.println("Price:  " + Reservation.getPricePerNightFormatted() + " per night");
-		System.out.println("Total Price" + Reservation.getPricePerNightFormatted() + Reservation.getNumberOfNights() +" nights");
+		System.out.println("Total Price" + Reservation.getNumberOfNights()+ Reservation.getNumberOfNights() +" nights");
 		
 		
 		
