@@ -80,6 +80,9 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\murach\java\eclipse\ex_solutions\ch22_ex1_BookCatalog_sol"/>
+			<item value="C:\murach\java\eclipse\ex_starts\ch22_ex1_BookCatalog"/>
+			<item value="C:\murach\java\eclipse\ex_solutions\ch23_ex1_Counter_sol"/>
 			<item value="C:\Users\Max-Student\Desktop\project_16-2_CustomerManager-20201012T163027Z-001"/>
 			<item value="C:\murach\java\eclipse\ex_solutions\ch16_ex1_ExceptionTester_sol"/>
 			<item value="C:\murach\java\eclipse\ex_starts\ch16_ex1_ExceptionTester"/>
@@ -97,9 +100,6 @@
 			<item value="C:\murach\java\eclipse\ex_solutions\ch12_ex1_CardDeck_sol"/>
 			<item value="C:\murach\java\eclipse\ex_starts\ch12_ex1_CardDeck"/>
 			<item value="C:\murach\java\eclipse\ex_solutions\ch11_ex2_FutureValue_sol"/>
-			<item value="C:\murach\java\eclipse\ex_starts\ch11_ex2_FutureValue"/>
-			<item value="C:\murach\java\eclipse\ex_starts\ch11_ex1_MonthSales"/>
-			<item value="C:\murach\java\eclipse\ex_starts\ch07_ex3_AreaAndPerimeter"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>

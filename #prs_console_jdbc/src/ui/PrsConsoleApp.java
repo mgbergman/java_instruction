@@ -32,26 +32,27 @@ public class PrsConsoleApp {
 				System.out.println("5 - Add LineItem   ");
 				System.out.println("6 - Exit   ");
 				System.out.println("7 - List Users");
+				System.out.println("8 - Remove Users");
 				System.out.println();	
 				
 				command = Console.getString("Command?   ");
 				
+				int id;
 				switch (command) {
 					case "1":
 				
-						int Id = Console.getInt("ID?");
+					
 						String UserName = Console.getString("User Name?                 ");
 						String Password = Console.getString("Password?                  ");
 						String FirstName = Console.getString("First Name?               ");
 						String LastName = Console.getString("Last Name?                 ");
 						String PhoneNumber = Console.getString("Phone Number            ");
 						String Email = Console.getString("Email?                        ");
-						String Reviewer = Console.getString("Reviewer?                  ");
-						String Admin = Console.getString("Admin?                        ");
+
 						
 						
-	//					PrsUser u = new PrsUser(Id, UserName, Password, FirstName, LastName, PhoneNumber, Email, Reviewer, Admin);
-	//					userDAO.add(u);
+						PrsUser u = new PrsUser(UserName, Password, FirstName, LastName, PhoneNumber, Email);
+						userDAO.add(u);
 						System.out.println("user Added!");
 	//					System.out.println(u.toString());
 						System.out.println();
@@ -134,15 +135,32 @@ public class PrsConsoleApp {
 					case "7":
 						// List Actors
 						System.out.println("List of all Users");
-						for (PrsUser u: userDAO.getAll()) {
-							if (u!=null) { 
-								System.out.println(u.toString());
+						for (PrsUser u1: userDAO.getAll()) {
+							if (u1!=null) { 
+								System.out.println(u1.toString());
 							}
 						}
 						System.out.println();
 						break;
 				 
-				 
+					case "8":
+						
+						System.out.println("*** Delete *** ");
+						id = Console.getInt("ID? ");
+					    
+						
+						u = userDAO.get(id);
+						if (u!= null) { 
+							if (userDAO.delete(u)) {
+								System.out.println("Delete Succesful");
+							}
+						}
+						else {
+							System.out.println("No User Found");
+						}
+						System.out.println();
+						break;
+			
 			
 				}
 			

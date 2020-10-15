@@ -16,7 +16,7 @@ public class PrsUser {
 	}
 
 	public PrsUser(int id, String userName, String password, String firstName, String lastName, String phoneNumber,
-			String email, String reviewer, String admin) {
+			String email) {
 		ID = id;
 		UserName = userName;
 		Password = password;
@@ -24,10 +24,22 @@ public class PrsUser {
 		LastName = lastName;
 		UserPhoneNumber = phoneNumber;
 		UserEmail = email;
-		Reviewer = reviewer;
-		Admin = admin;
+//		Reviewer = reviewer;
+//		Admin = admin;
 	}
 
+		public PrsUser(String userName, String password, String firstName, String lastName, String phoneNumber,
+				String email) {
+			UserName = userName;
+			Password = password;
+			FirstName = firstName;
+			LastName = lastName;
+			UserPhoneNumber = phoneNumber;
+			UserEmail = email;
+//			Reviewer = reviewer;
+//			Admin = admin;
+		}		
+		
 	public String getUserName() {
 		return UserName;
 	}
@@ -102,8 +114,8 @@ public class PrsUser {
 	}
 
 	public int getId() {
-		// TODO Auto-generated method stub
-		return 0;
+		
+		return ID;
 	}
 
 	public String displaySummary() {

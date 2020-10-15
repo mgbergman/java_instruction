@@ -89,7 +89,7 @@ public class UserDB implements DAO<PrsUser> {
 		String ir = rs.getString(8);
 		String ia = rs.getString(9);
 		
-		PrsUser u = new PrsUser(id,un,pw,fn,ln,pn,em,ir,ia);
+		PrsUser u = new PrsUser(id,un,pw,fn,ln,pn,em);
 		return u;
 	}
 	
@@ -97,21 +97,19 @@ public class UserDB implements DAO<PrsUser> {
 	@Override
 	public boolean add(PrsUser u) {
 		boolean success = false;
-		String sql = "insert into actor (ID, UserName, Password, FirstName, LastName, PhoneNumber, Email, IsReviewer, IsAdmin) "
-				+ "values (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+		String sql = "insert into user (UserName, Password, FirstName, LastName, PhoneNumber, Email) "
+				+ "values (?, ?, ?, ?, ?, ?)";
 	
 		try (Connection conn = getConnection();
 				PreparedStatement ps = conn.prepareStatement(sql)) {
 			
-			ps.setLong(1, u.getId());
-			ps.setString(2, u.getUserName());
-			ps.setString(3, u.getPassword());
-			ps.setString(4, u.getFirstName());
-			ps.setString(5, u.getLastName());
-			ps.setString(6, u.getUserPhoneNumber());
-			ps.setString(7, u.getUserEmail());
-			ps.setString(8, u.getReviewer());
-			ps.setString(9, u.getAdmin());
+			ps.setString(1, u.getUserName());
+			ps.setString(2, u.getPassword());
+			ps.setString(3, u.getFirstName());
+			ps.setString(4, u.getLastName());
+			ps.setString(5, u.getUserPhoneNumber());
+			ps.setString(6, u.getUserEmail());
+		
 			ps.executeUpdate();
 			success = true;
 		
@@ -155,7 +153,7 @@ public class UserDB implements DAO<PrsUser> {
 	@Override
 	public boolean delete(PrsUser u) {
 		boolean success = false;
-		String sql = "delete from actor "
+		String sql = "delete from user "
 				+ "where id = ?";
 		try (Connection conn = getConnection();
 				PreparedStatement ps = conn.prepareStatement(sql)) {
