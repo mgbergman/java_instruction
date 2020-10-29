@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="installedFeatures">
+		<item value="com.chookapp.org.Bracketeer:1.2.0.201203031719"/>
+		<item value="com.chookapp.org.BracketeerJDT:1.2.0.201203031719"/>
 		<item value="com.ianbrandt.tools.m2e.mdp.feature:0.0.4.201409291703"/>
 		<item value="org.eclipse.buildship:3.1.4.v20200326-1743"/>
 		<item value="org.eclipse.egit.gitflow.feature:5.9.0.202009080501-r"/>

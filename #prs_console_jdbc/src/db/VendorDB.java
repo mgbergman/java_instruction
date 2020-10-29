@@ -107,8 +107,8 @@ public class VendorDB implements DAO<PrsVendor> {
 			ps.setString(3, v.getCity());
 			ps.setString(4, v.getState());
 			ps.setString(5, v.getZip());
-			ps.setString(6, v.getPhoneNumber());
-			ps.setString(7, v.getEmail());
+			ps.setString(6, v.getVendPhoneNumber());
+			ps.setString(7, v.getVendEmail());
 		
 			ps.executeUpdate();
 			success = true;
@@ -138,8 +138,8 @@ public class VendorDB implements DAO<PrsVendor> {
 			ps.setString(3, v.getCity());
 			ps.setString(4, v.getState());
 			ps.setString(5, v.getZip());
-			ps.setString(6, v.getPhoneNumber());
-			ps.setString(7, v.getEmail());
+			ps.setString(6, v.getVendPhoneNumber());
+			ps.setString(7, v.getVendEmail());
 			ps.executeUpdate();
 			success = true;	
 			

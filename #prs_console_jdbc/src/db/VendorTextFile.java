@@ -104,8 +104,8 @@ public class VendorTextFile implements DAO<PrsVendor> {
 				out.print(v.getCity()+FIELD_SEP);
 				out.print(v.getState()+FIELD_SEP);
 				out.print(v.getZip()+FIELD_SEP);
-				out.print(v.getPhoneNumber()+FIELD_SEP);
-				out.print(v.getEmail()+FIELD_SEP);
+				out.print(v.getVendPhoneNumber()+FIELD_SEP);
+				out.print(v.getVendEmail()+FIELD_SEP);
 				
 				
 				
